@@ -8,6 +8,171 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	
+	<header class="main-header container">
+		<nav class="main-navigation">
+			<ul>
+				<li><a href="#">Информация</a></li>
+				<li><a href="#">Фото и видео</a></li>
+				<li><a href="#">Карта штата</a></li>
+				<li><a href="hotels.html">Гостинницы</a></li>
+			</ul>
+		</nav>
+
+		<h1>Седона - небольшой городок в Аризоне, заслуживающий большего</h1>
+
+		<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+	</header>
+
+	<main class="container">
+		<div class="index-content">
+			<section class="index-reason">
+				<h2>Настоящий городок</h2>
+				<b class="index-reason-number">
+					<span>№1</span>
+				</b>
+				<p class="index-reason-desc">
+					Седона - не аттракцион для туристов, там течет своя жизнь
+				</p>
+			</section>
+
+			<figure class="index-img">
+				<img src="img/town-teaser.jpg" alt="Town image" width="800" height="256">
+			</figure>
+		</div>
+
+		<div class="index-offers">
+			<section class="index-offers-item">
+				<div class="index-offers-img">
+					<img src="img/housing.png" alt="Housing" width="75" height="72">
+				</div>
+				<h3 class="index-offers-title">Жилье</h3>
+				<p class="index-offers-desc">
+					Рекомендуем пожить  настоящем отеле, все как в кино
+				</p>
+			</section>
+
+			<section class="index-offers-item">
+				<div class="index-offers-img">
+					<img src="img/food.png" alt="Food" width="74" height="70">
+				</div>
+				<h3 class="index-offers-title">Еда</h3>
+				<p class="index-offers-desc">
+					Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+				</p>
+			</section>
+
+			<section class="index-offers-item">
+				<div class="index-offers-img">
+					<img src="img/souvenirs.png" alt="Souvenirs" width="64" height="76">
+				</div>
+				<h3 class="index-offers-title">Сувениры</h3>
+				<p class="index-offers-desc">
+					Не только китайского, но и местного производства!
+				</p>
+			</section>
+		</div>
+
+		<div class="index-content index-content-reverse">
+			<figure class="index-img">
+				<img src="img/bridge-teaser.jpg" alt="Town image" width="800" height="256">
+			</figure>
+
+			<section class="index-reason">
+				<h2>Там есть мост дьявола</h2>
+				<b class="index-reason-number">
+					<span>№2</span>
+				</b>
+				<p class="index-reason-desc">
+					Да, по нему можно пройти! Если, конечно, вы осмелитесь
+				</p>
+			</section>
+		</div>
+
+		<div class="index-offers">
+			<section class="index-offers-item index-item-bottom">
+				<h3 class="index-offers-title">Небольшая площадь</h3>
+				<b class="index-reason-number index-number-white">
+					<span>№3</span>
+				</b>
+				<p class="index-offers-desc">
+					Все достопримечательности находятся очень близко
+				</p>
+			</section>
+
+			<section class="index-offers-item index-item-bottom">
+				<h3 class="index-offers-title">Красивая дорога</h3>
+				<b class="index-reason-number index-number-white">
+					<span>№4</span>
+				</b>
+				<p class="index-offers-desc">
+					Ехать в Седону из Лас-Вегаса совсем не скучно!
+				</p>
+			</section>
+
+			<section class="index-offers-item index-item-bottom">
+				<h3 class="index-offers-title">Мало туристов</h3>
+				<b class="index-reason-number index-number-white">
+					<span>№5</span>
+				</b>
+				<p class="index-offers-desc">
+					Большинство едет в Гранд Каньон и толпится там
+				</p>
+			</section>
+		</div>
+
+		<section class="hotel-search">
+			<b>Заинтересовались?</b>
+			<p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+			<button type="button" class="hotel-search-btn">Поиск гостинницы в Седоне</button>
+		</section>
+	</main>
+
+	<footer class="main-footer">
+		<div class="footer-map">
+			<img src="img/map.jpg" alt="Sedona Map" width="1200" height="593">
+		</div>
+
+		<div class="footer-social">
+			<div class="footer-social-hash">
+				#visitsedona
+			</div>
+
+			<div class="footer-social-icons">
+				<ul>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Youtube</a></li>
+				</ul>
+			</div>
+
+			<div class="footer-credits">
+				Website by Taras.Tataryn.Ttm
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal-content">
+		<p>
+			<label for="date-in">Дата заезда:</label>
+			<input type="text" name="date-in" id="date-in" class="modal-content-input">
+		</p>
+
+		<p>
+			<label for="date-out">Дата выезда:</label>
+			<input type="text" name="date-out" id="date-out" class="modal-content-input">
+		</p>
+
+		<p>
+			<label for="adult-number">
+				Взрослые: <input type="text" name="adult" id="adult-number" class="modal-content-input-sm">
+			</label>
+
+			<label for="children-number">
+				Дети: <input type="text" name="children" id="children-number" class="modal-content-input-sm">
+			</label>
+		</p>
+		
+		<button type="button" class="modal-content-btn">Найти</button>
+	</div>
 </body>
 </html>
