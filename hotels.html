@@ -14,64 +14,61 @@
 				<ul>
 					<li><a href="#">Информация</a></li>
 					<li><a href="#">Фото и видео</a></li>
+					<li class="logo">
+						<a href="index.html"><img src="img/city-of-sedona.png" alt="Sedona Logo" width="138" height="70"></a>
+					</li>
 					<li><a href="#">Карта штата</a></li>
 					<li><a href="hotels.html">Гостинницы</a></li>
 				</ul>
 			</nav>
-			
-			<div class="logo">
-				<a href="index.html">
-					<img src="img/city-of-sedona.png" alt="" width="138" height="70">
-				</a>
-			</div>
 		</header>
 
 		<main>
 			<form action="#" class="filter">
 				<fieldset class="filter-block infrastructure">
-					<legend class="form-title">Инфраструктура:</legend>
-					<ul>
+					<legend class="filter-block-title">Инфраструктура:</legend>
+					<ul class="filter-block-list">
 						<li>
 							<input type="checkbox" name="infrastructure" value="basin" id="basin">
-							<label for="basin">Бассейн</label>
+							<label for="basin">Бассейн<span></span></label>
 						</li>
 						<li>
 							<input type="checkbox" name="infrastructure" value="park" id="park">
-							<label for="park">Парковка</label>
+							<label for="park">Парковка<span></span></label>
 						</li>
 						<li>
 							<input type="checkbox" name="infrastructure" value="wifi" id="wifi">
-							<label for="wifi">Wi-Fi</label>
+							<label for="wifi">Wi-Fi<span></span></label>
 						</li>
 					</ul>
 				</fieldset>
 
 				<fieldset class="filter-block housing">
-					<legend class="form-title">Тип жилья:</legend>
-					<ul>
+					<legend class="filter-block-title">Тип жилья:</legend>
+					<ul class="filter-block-list">
 						<li>
 							<input type="checkbox" name="housing" value="hotel" id="hotel">
-							<label for="hotel">Гостинница</label>
+							<label for="hotel">Гостинница<span></span></label>
 						</li>
 						<li>
 							<input type="checkbox" name="housing" value="motel" id="motel">
-							<label for="motel">Мотель</label>
+							<label for="motel">Мотель<span></span></label>
 						</li>
 						<li>
 							<input type="checkbox" name="housing" value="apartment" id="apartment">
-							<label for="apartment">Апартаменты</label>
+							<label for="apartment">Апартаменты<span></span></label>
 						</li>
 					</ul>
 				</fieldset>
 
 				<fieldset class="filter-block daily-price">
-					<legend class="form-title">Стоимость в сутки (р):</legend>
+					<legend class="filter-block-title">Стоимость в сутки (р):</legend>
 
 					<div class="filter-range">
-						<span class="from">
+						<span class="filter-range-left">
 							От <input type="text" class="filter-range-from">
 						</span>
-						<span class="to">
+						<span class="filter-range-right">
 							До <input type="text" class="filter-range-to">
 						</span>
 					</div>
@@ -84,7 +81,7 @@
 					</div>
 				</fieldset>
 
-				<button type="submit" class="filter-btn">Показать</button>
+				<button type="submit" class="filter-block-btn">Показать</button>
 			</form>
 
 			<section class="filter-sort">
@@ -106,7 +103,7 @@
 				</div>
 
 				<h3 class="filter-result-title">Amara Resort &amp; SPA</h3>
-				<div class="rating-stars">
+				<div class="filter-result-stars">
 					<img src="img/four-stars.png" alt="4 stars" width="89" height="17">
 				</div>
 
@@ -119,7 +116,7 @@
 					<a href="#" class="btn btn-info">Подробнее</a>
 					<a href="#" class="btn btn-book">Забронировать</a>
 				</div>
-				<b class="rating-text">Рейтинг: 8,5</b>
+				<b class="filter-result-rating">Рейтинг: 8,5</b>
 
 				<hr class="line">
 			</section>
@@ -130,7 +127,7 @@
 				</div>
 
 				<h3 class="filter-result-title">Desert Quail Inn</h3>
-				<div class="rating-stars">
+				<div class="filter-result-stars">
 					<img src="img/three-stars.png" alt="3 stars" width="65" height="17">
 				</div>
 
@@ -143,7 +140,7 @@
 					<a href="#" class="btn btn-info">Подробнее</a>
 					<a href="#" class="btn btn-book">Забронировать</a>
 				</div>
-				<b class="rating-text">Рейтинг: 8,9</b>
+				<b class="filter-result-rating">Рейтинг: 8,9</b>
 
 				<hr class="line">
 			</section>
@@ -154,7 +151,7 @@
 				</div>
 
 				<h3 class="filter-result-title">Villas at Poco Diablo</h3>
-				<div class="rating-stars">
+				<div class="filter-result-stars">
 					<img src="img/two-stars.png" alt="2 stars" width="42" height="17">
 				</div>
 
@@ -167,29 +164,27 @@
 					<a href="#" class="btn btn-info">Подробнее</a>
 					<a href="#" class="btn btn-book">Забронировать</a>
 				</div>
-				<b class="rating-text">Рейтинг: 9,2</b>
+				<b class="filter-result-rating">Рейтинг: 9,2</b>
 
 				<hr class="line">
 			</section>
 		</main>
 
 		<footer class="main-footer">
+			<div class="footer-hash">
+				#visitsedona
+			</div>
+
 			<div class="footer-social">
-				<div class="footer-social-hash">
-					#visitsedona
-				</div>
+				<ul class="footer-social-list">
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Youtube</a></li>
+				</ul>
+			</div>
 
-				<div class="footer-social-icons">
-					<ul>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Facebook</a></li>
-						<li><a href="#">Youtube</a></li>
-					</ul>
-				</div>
-
-				<div class="footer-copyright">
-					Website by Taras.Tataryn.Ttm
-				</div>
+			<div class="footer-copyright">
+				Website by Taras.Tataryn.Ttm
 			</div>
 		</footer>
 	</div>
