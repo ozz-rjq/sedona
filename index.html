@@ -132,11 +132,42 @@
 				</section>
 			</div>
 
-			<section class="hotel-search">
-				<b class="hotel-search-title">Заинтересовались?</b>
-				<p class="hotel-search-desc">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-				<button type="button" class="hotel-search-btn">Поиск гостинницы в Седоне</button>
-			</section>
+			<div class="search-block">
+				<section class="hotel-search">
+					<b class="hotel-search-title">Заинтересовались?</b>
+					<p class="hotel-search-desc">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+					<button type="button" class="hotel-search-btn">Поиск гостинницы в Седоне</button>
+				</section>
+
+				<div class="modal-content">
+					<p class="modal-content-field">
+						<label for="date-in">Дата заезда:</label>
+						<input type="text" name="date-in" placeholder="24 апреля 2017" id="date-in" class="modal-content-input">
+					</p>
+
+					<p class="modal-content-field">
+						<label for="date-out">Дата выезда:</label>
+						<input type="text" name="date-out" placeholder="4 июля 2017" id="date-out" class="modal-content-input">
+					</p>
+
+					<div class="modal-content-tourists">
+						<label for="adult-number">
+							Взрослые: 
+						</label>
+						<div class="tourists">
+							<button type="button" class="minus"></button><input type="number" name="adult" id="adult-number" class="tourists-number"><button type="button" class="plus"></button>
+						</div>
+
+						<label for="children-number">
+							Дети: 
+						</label>
+						<div class="tourists">
+							<button type="button" class="minus"></button><input type="number" name="children" id="children-number" class="tourists-number"><button type="button" class="plus"></button>
+						</div>
+					</div>
+					<button type="button" class="modal-content-btn">Найти</button>
+				</div>
+			</div>
 
 			<div class="map">
 				<img src="img/map.jpg" alt="Sedona Map" width="1200" height="593">
@@ -160,31 +191,8 @@
 				Website by Taras.Tataryn.Ttm
 			</div>
 		</footer>
-
-		<div class="modal-content">
-			<p class="modal-content-field">
-				<label for="date-in">Дата заезда:</label>
-				<input type="text" name="date-in" id="date-in" class="modal-content-input">
-			</p>
-
-			<p class="modal-content-field">
-				<label for="date-out">Дата выезда:</label>
-				<input type="text" name="date-out" id="date-out" class="modal-content-input">
-			</p>
-
-			<p class="modal-content-tourists">
-				<label for="adult-number">
-					Взрослые: 
-				</label>
-				<button type="button" class="minus"></button><input type="text" name="adult" id="adult-number" class="tourists-number"><button type="button" class="plus"></button>
-
-				<label for="children-number">
-					Дети: 
-				</label>
-				<button type="button" class="minus"></button><input type="text" name="children" id="children-number" class="tourists-number"><button type="button" class="plus"></button>
-			</p>
-			<button type="button" class="modal-content-btn">Найти</button>
-		</div>
 	</div>
+
+	<script src="js/script.js"></script>
 </body>
 </html>
