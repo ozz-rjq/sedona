@@ -16,6 +16,8 @@ body{
 
 	box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2); 
 	background-color: #fff;
+
+	position: relative;
 }
 
 /* placeholder styles */
@@ -31,6 +33,10 @@ body{
 }
 :-ms-input-placeholder{
 	color:#000;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 /* HEADER */
@@ -49,10 +55,11 @@ body{
 
 		list-style: none;
 		display: flex;
-		align-items: center;
 
 		li{
 			flex-basis: 120px;
+
+			padding-top: 15px;
 
 			&:nth-child(1){
 				margin-left: 72px;
@@ -360,8 +367,7 @@ body{
 		justify-content: space-between;
 		align-items: center;
 
-		&::after{
-			content: "";
+		.calendar{
 			position: absolute;
 			top: 8px;
 			right: 10px;
@@ -374,15 +380,15 @@ body{
 			background-position: 0px 0px;
 
 			opacity: 0.3;
-		}
 
-		&:hover::after{
-			opacity: 1;
-			cursor: pointer;
-		}
+			&:hover{
+				opacity: 1;
+				cursor: pointer;
+			}
 
-		&:active::after{
-			background-position: 0px -37px;
+			&:active{
+				background-position: 0px -37px;
+			}
 		}
 	}
 
@@ -539,5 +545,104 @@ body{
 	100%{
 		transform: scaleY(1) translateY(0);
 		opacity: 1;
+	}
+}
+
+/* FOOTER */
+
+.main-footer{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	width: 100%;
+	padding-top: 36px;
+	padding-bottom: 36px;
+
+	background-color: rgba(255,255,255,0.9);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer{
+
+	&-element{
+		flex-basis: 400px;
+	}
+
+	&-hash{
+
+		&-link{
+			display: block;
+
+			font-size: 21px;
+			line-height: 26px;
+			font-weight: 700;
+			text-align: center;
+		}
+	}
+
+	&-social{
+		
+		&-list{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			display: flex;
+			justify-content: center;
+
+			li{
+				position: relative;
+
+				margin-right: 6px;
+				font-size: 0;
+
+				width: 46px;
+				height: 46px;
+				background-color: #81b3d2;
+			}
+
+			a{
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				width: 100%;
+				height: 100%;
+
+				background-image: url("../img/spritesheet.png");
+				background-repeat: no-repeat;
+
+				&.fb{
+					background-position: 18px -171px;
+				}
+
+				&.tw{
+					background-position: 16px -203px;
+				}
+
+				&.yt{
+					background-position: 14px -233px;
+				}
+
+				&:hover{
+					background-color: #669ec0;
+				}
+
+				&:active{
+					background-color: #5496bd;
+					opacity: 0.3;
+				}
+			}
+		}
+	}
+
+	&-copyright{
+		font-size: 14px;
+		line-height: 26px;
+		text-align: center;
 	}
 }

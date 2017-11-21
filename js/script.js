@@ -11,7 +11,7 @@ var plusChildren = document.querySelector(".js-children-plus");
 var minusChildren = document.querySelector(".js-children-minus");
 var childrenField = document.querySelector("#children-number");
 
-
+/* SHOW MODAl WINDOW */
 searchBtn.addEventListener("click", function(event){
 	event.preventDefault();
 
@@ -21,6 +21,7 @@ searchBtn.addEventListener("click", function(event){
 		searchBlock.classList.remove("modal-content-show");
 });
 
+/* ADD AND SUBTRACT TOURISTS */
 plusAdult.addEventListener("click", addAdult);
 minusAdult.addEventListener("click", subtractAdult);
 
@@ -48,3 +49,19 @@ function subtractChild(){
 	else
 		alert("CRITICAL ERROR 404");
 }
+
+adultField.addEventListener("keydown", function(event){
+	event.preventDefault();
+	if (event.keyCode === 40 && adultField.value > 0)
+		adultField.value--;
+	else if (event.keyCode === 38 && adultField.value >= 0)
+		adultField.value++;
+});
+
+childrenField.addEventListener("keydown", function(event){
+	event.preventDefault();
+	if (event.keyCode === 40 && childrenField.value > 0)
+		childrenField.value--;
+	else if (event.keyCode === 38 && childrenField.value >= 0)
+		childrenField.value++;
+})
