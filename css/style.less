@@ -646,3 +646,63 @@ input[type="number"] {
 		text-align: center;
 	}
 }
+
+/* hotel.html */
+
+/* FORM FILTER */
+
+.filter{
+	padding-left: 72px;
+	padding-top: 27px;
+
+	background-color: #507fa9;
+	background-image: url("../img/filter-bg.jpg");
+
+	display: flex;
+
+	&-block{
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		border: none;
+
+		color: #fff;
+
+		&-title{
+			font-size: 16px;
+			line-height: 21px;
+			font-weight: 700;
+		}
+
+		&-list{
+			margin: 0;
+			margin-top: 24px;
+			padding: 0;
+
+			list-style: none;
+
+			li{
+				font-size: 14px;
+				line-height: 21px;
+
+				margin-bottom: 25px;
+
+				&:last-child{
+					margin-bottom: 32px;
+				}
+			}
+		}
+	}
+
+	.infrastructure{
+		flex-basis: 250px;
+	}
+
+	.housing{
+		flex-basis: 474px;
+	}
+
+	.daily-price{
+		flex-basis: 400px;
+	}
+}
