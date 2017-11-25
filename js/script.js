@@ -84,17 +84,17 @@ if(childrenField)
 if(filterRangeFrom)
 	filterRangeFrom.addEventListener("keydown", function(event){
 		event.preventDefault();
-		if (event.keyCode === 40 && filterRangeFrom.value > 0)
+		if (event.keyCode === 40 && +filterRangeFrom.value > 0)
 			filterRangeFrom.value--;
-		else if (event.keyCode === 38 && filterRangeFrom.value < filterRangeTo.value)
+		else if (event.keyCode === 38 && +filterRangeFrom.value < +filterRangeTo.value)
 			filterRangeFrom.value++;
 	});
 
 if(filterRangeTo)
 	filterRangeTo.addEventListener("keydown", function(event){
 		event.preventDefault();
-		if (event.keyCode === 40 && filterRangeTo.value > filterRangeFrom.value)
+		if (event.keyCode === 40 && +filterRangeTo.value > +filterRangeFrom.value)
 			filterRangeTo.value--;
-		else if (event.keyCode === 38 && filterRangeTo.value < 3600)
+		else if (event.keyCode === 38 && +filterRangeTo.value < 3600)
 			filterRangeTo.value++;
 	});
