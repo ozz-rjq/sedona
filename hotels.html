@@ -34,11 +34,11 @@
 							<label for="basin">Бассейн<span></span></label>
 						</li>
 						<li>
-							<input type="checkbox" name="infrastructure" value="park" id="park">
+							<input type="checkbox" name="infrastructure" value="park" id="park" disabled>
 							<label for="park">Парковка<span></span></label>
 						</li>
 						<li>
-							<input type="checkbox" name="infrastructure" value="wifi" id="wifi">
+							<input type="checkbox" name="infrastructure" value="wifi" id="wifi" checked>
 							<label for="wifi">Wi-Fi<span></span></label>
 						</li>
 					</ul>
@@ -48,7 +48,7 @@
 					<legend class="filter-block-title">Тип жилья:</legend>
 					<ul class="filter-block-list">
 						<li>
-							<input type="checkbox" name="housing" value="hotel" id="hotel">
+							<input type="checkbox" name="housing" value="hotel" id="hotel" checked>
 							<label for="hotel">Гостинница<span></span></label>
 						</li>
 						<li>
@@ -63,14 +63,15 @@
 				</fieldset>
 
 				<fieldset class="filter-block daily-price">
-					<legend class="filter-block-title">Стоимость в сутки (р):</legend>
+					<legend class="filter-block-title filter-range-title">Стоимость в сутки (р):</legend>
 
 					<div class="filter-range">
-						<span class="filter-range-left">
-							От <input type="text" class="filter-range-from">
+						<span class="filter-range-item filter-range-left">
+							От <input type="number" value="0" class="filter-range-field filter-range-from">
 						</span>
-						<span class="filter-range-right">
-							До <input type="text" class="filter-range-to">
+						<span class="vr-line"></span>
+						<span class="filter-range-item filter-range-right">
+							До <input type="number" value="3000" class="filter-range-field filter-range-to">
 						</span>
 					</div>
 
