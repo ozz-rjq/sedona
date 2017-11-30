@@ -1,5 +1,7 @@
 ;(function(){
 
+	var container = document.querySelector(".container");
+
 	/* Index.html variables*/
 	var searchBtn = document.querySelector(".hotel-search-btn");
 	var searchBlock = document.querySelector(".modal-content");
@@ -16,6 +18,9 @@
 	/* hotels.html variables*/
 	var filterRangeFrom = document.querySelector(".filter-range-from");
 	var filterRangeTo = document.querySelector(".filter-range-to");
+
+	/* responsive text */
+	var lineBreak = document.querySelector(".js-line-break");
 
 	/* SHOW MODAl WINDOW */
 	if(searchBtn)
@@ -99,4 +104,28 @@
 			else if (event.keyCode === 38 && +filterRangeTo.value < 3600)
 				filterRangeTo.value++;
 		});
+
+
+	/* onresize breakpoint*/
+
+	if(lineBreak)
+		window.addEventListener("resize", function(event){
+			if (container.offsetWidth < 986)
+				lineBreak.innerHTML = "Все достопримеча-тельности находятся очень близко";
+			else
+				lineBreak.innerHTML = "Все достопримечательности находятся очень близко";
+
+			if (container.offsetWidth < 1024)
+				document.querySelector(".js-town-teaser").src = "img/town-teaser-768.png";
+			else
+				document.querySelector(".js-town-teaser").src = "img/town-teaser.jpg";
+
+			if(container.offsetWidth < 1024)
+				document.querySelector(".js-bridge-teaser").src ="img/bridge-teaser-768.png";
+			else
+				document.querySelector(".js-bridge-teaser").src ="img/bridge-teaser.jpg";
+		});
+
+	
+
 }());

@@ -48,6 +48,9 @@ input[type="number"] {
 }
 
 .main-navigation{
+	padding-left: 6%;
+	padding-right: 6%;
+
 	&-list{
 		margin: 0;
 		padding: 0;
@@ -58,21 +61,13 @@ input[type="number"] {
 		display: flex;
 
 		li{
-			flex-basis: 120px;
+			flex-basis: 24%;
 
 			padding-top: 15px;
 
-			&:nth-child(1){
-				margin-left: 72px;
-				margin-right: 120px;
-			}
-
-			&:nth-child(2){
-				margin-right: 368px;
-			}
-
-			&:nth-child(3){
-				margin-right: 129px;
+			&:nth-child(3),
+			&:nth-child(4){
+				text-align: right;
 			}
 		}
 
@@ -96,8 +91,10 @@ input[type="number"] {
 	&-logo{
 		position: absolute;
 		top: 0;
-		left: 531px;
+		left: 50%;
 		z-index: 10;
+
+		margin-left: -69px;
 	}
 }
 
@@ -153,7 +150,9 @@ input[type="number"] {
 }
 
 .reason{
-	flex-basis: 400px;
+	box-sizing: border-box;
+	flex-basis: 33.35%;
+	max-height: 256px;
 
 	padding-top: 54px;
 
@@ -166,7 +165,11 @@ input[type="number"] {
 		padding: 0;
 		height: 256px;
 
-		flex-basis: 800px;
+		flex-basis: 66.65%;
+
+		img{
+			max-width: 100%;
+		}
 	}
 
 	&-title{
@@ -192,7 +195,7 @@ input[type="number"] {
 
 	&-desc{
 		margin: 0 auto;
-		width: 310px;
+		width: 72%;
 
 		font-size: 14px;
 		line-height: 21px;
@@ -214,7 +217,7 @@ input[type="number"] {
 	padding-top: 56px;
 
 	&-item{
-		flex-basis: 400px;
+		flex-basis: 33.33%;
 
 		&-img{
 			width: 80px;
@@ -241,12 +244,18 @@ input[type="number"] {
 		}
 
 		&-desc{
-			margin: 0;
+			margin: 0 auto;
 			margin-bottom: 82px;
+
+			width: 64%;
 
 			font-size: 14px;
 			line-height: 21px;
 			text-align: center;
+
+			&:last-child{
+				//width: 65%;
+			}
 		}
 	}
 }
@@ -262,7 +271,7 @@ input[type="number"] {
 
 		&-desc{
 			padding-bottom: 59px;
-			margin: 0;
+			margin: 0 auto;
 		}
 	}
 }
@@ -340,6 +349,7 @@ input[type="number"] {
 	padding-bottom: 55px;
 	padding-left: 55px;
 	padding-right: 55px;
+	margin-left: -284px;
 
 	font-size: 14px;
 	line-height: 26px;
@@ -349,7 +359,7 @@ input[type="number"] {
 
 	position: absolute;
 	top: 239px;
-	left: 316px;
+	left: 50%;
 
 	display: none;
 
@@ -546,6 +556,16 @@ input[type="number"] {
 	100%{
 		transform: scaleY(1) translateY(0);
 		opacity: 1;
+	}
+}
+
+/* MAP */
+
+.map{
+	width: 100%;
+
+	img{
+		width: 100%;
 	}
 }
 
