@@ -19,9 +19,6 @@
 	var filterRangeFrom = document.querySelector(".filter-range-from");
 	var filterRangeTo = document.querySelector(".filter-range-to");
 
-	/* responsive text */
-	var lineBreak = document.querySelector(".js-line-break");
-
 	/* SHOW MODAl WINDOW */
 	if(searchBtn)
 		searchBtn.addEventListener("click", function(event){
@@ -86,7 +83,6 @@
 		});
 
 	/* Filter logic */
-
 	if(filterRangeFrom)
 		filterRangeFrom.addEventListener("keydown", function(event){
 			event.preventDefault();
@@ -105,16 +101,8 @@
 				filterRangeTo.value++;
 		});
 
-
 	/* onresize breakpoint*/
-
-	if(lineBreak)
 		window.addEventListener("resize", function(event){
-			if (container.offsetWidth < 986)
-				lineBreak.innerHTML = "Все достопримеча-тельности находятся очень близко";
-			else
-				lineBreak.innerHTML = "Все достопримечательности находятся очень близко";
-
 			if (container.offsetWidth < 1024)
 				document.querySelector(".js-town-teaser").src = "img/town-teaser-768.png";
 			else
@@ -124,8 +112,10 @@
 				document.querySelector(".js-bridge-teaser").src ="img/bridge-teaser-768.png";
 			else
 				document.querySelector(".js-bridge-teaser").src ="img/bridge-teaser.jpg";
+
+			if (container.offsetWidth < 986)
+				document.querySelector(".js-line-break").innerHTML = "Все достопримеча-тельности находятся очень близко";
+			else
+				document.querySelector(".js-line-break").innerHTML = "Все достопримечательности находятся очень близко";
 		});
-
-	
-
 }());
