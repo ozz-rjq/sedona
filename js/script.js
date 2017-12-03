@@ -102,6 +102,7 @@
 		});
 
 	/* onresize breakpoint*/
+	if(!document.querySelector(".inner-page"))
 		window.addEventListener("resize", function(event){
 			if (container.offsetWidth < 1024)
 				document.querySelector(".js-town-teaser").src = "img/town-teaser-768.png";
@@ -118,4 +119,10 @@
 			else
 				document.querySelector(".js-line-break").innerHTML = "Все достопримечательности находятся очень близко";
 		});
+
+	if(document.querySelector(".inner-page"))
+		window.addEventListener("resize", function(event){
+			
+		});
+
 }());
