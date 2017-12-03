@@ -680,14 +680,17 @@ input[type="number"] {
 /* FORM FILTER */
 
 .filter{
-	padding-left: 72px;
+	padding-left: 6%;
+	padding-right: 6%;
 	padding-top: 27px;
 	margin-bottom: 30px;
 
 	background-color: #507fa9;
 	background-image: url("../img/filter-bg.jpg");
+	background-size: 100%;
 
 	display: flex;
+	//justify-content: space-between;
 
 	&-block{
 		box-sizing: border-box;
@@ -784,15 +787,16 @@ input[type="number"] {
 	}
 
 	.infrastructure{
-		flex-basis: 250px;
+		flex-basis: 24.25%;
 	}
 
 	.housing{
-		flex-basis: 474px;
+		flex-basis: 27.6%;
 	}
 
 	.daily-price{
-		flex-basis: 400px;
+		flex-basis: 29.44%;
+		margin-left: auto;
 	}
 
 	&-range{
@@ -918,7 +922,8 @@ hr.line{
 }
 
 .filter-sort{
-	padding-left: 73px;
+	padding-left: 6%;
+	padding-right: 6%;
 	margin-bottom: 30px;
 
 	display: flex;
@@ -928,7 +933,7 @@ hr.line{
 		font-size: 21px;
 		line-height: 26px;
 
-		margin-right: 50px;
+		flex-basis: 165px;
 	}
 
 	&-type{
@@ -937,6 +942,8 @@ hr.line{
 
 		font-size: 12px;
 		line-height: 24px;
+
+		flex-basis: 115px;
 	}
 
 	&-list{
@@ -945,15 +952,23 @@ hr.line{
 
 		list-style: none;
 
+		flex-basis: 73.5%;
+
+		display: flex;
+
 		li{
 			display: inline-block;
 			vertical-align: top;
 
-			margin-left: 36px;
+			margin-right: 36px;
+
+			&:nth-child(4){
+				margin-left: auto;
+			}
 
 			&:nth-child(4),
 			&:nth-child(5){
-				margin-left: 0;
+				margin-right: 0;
 			}
 		}
 
@@ -982,12 +997,16 @@ hr.line{
 		.filter-arrow{
 			border: none;
 			position: relative;
+
+			&:hover{
+				border-top-color: #022;
+				border-bottom-color: #022;
+			}
 		}
 
 		.filter-arrow-up{
 			top: -12px;
 
-			margin-left: 488px;
 			border-bottom: 10px solid #cccccc;
 			border-left: 5px solid transparent;
 			border-right: 5px solid transparent;
@@ -1015,7 +1034,8 @@ hr.line{
 .filter-result{
 	margin-top: 25px;
 	margin-bottom: 30px;
-	padding-left: 73px;
+	padding-left: 6%;
+	padding-right: 6%;
 
 	display: flex;
 
