@@ -366,6 +366,7 @@ input[type="number"] {
 	position: absolute;
 	top: 239px;
 	left: 50%;
+	z-index: 100;
 
 	display: none;
 
@@ -568,11 +569,29 @@ input[type="number"] {
 /* MAP */
 
 .map{
+	position: relative;
+
 	height: 593px;
 	width: 100%;
 
 	img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+
 		width: 100%;
+	}
+
+	iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+
+		width: 100%;
+		height: 593px;
+		border: none;
 	}
 }
 
@@ -582,6 +601,7 @@ input[type="number"] {
 	position: absolute;
 	left: 0;
 	bottom: 0;
+	z-index: 50;
 
 	width: 100%;
 	padding-top: 37px;
